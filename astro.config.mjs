@@ -7,6 +7,7 @@ import { SITE_URL } from "./src/data/config";
 export default defineConfig({
   integrations: [tailwind(), sitemap()],
   server: {
+    hmr: true,
     host: true,
     port: 3000
   },

@@ -49,13 +49,13 @@ const socialMediaPlatforms: SocialMediaPlatform[] = [
 ];
 
 const presentation: Presentation = {
-  name: "Anil",
-  mail: "Anil.Kumble@gmail.com",
-  title: "Software Engineer",
+  name: "Gerson Ruano",
+  mail: "toge619@gmail.com",
+  title: "Engineer Systems",
   description: `
-    Hi, I'm a <strong class="font-normal text-orange-600">software developer</strong>.
-    I am currently working with <strong class="font-normal text-orange-600">Typescript, ReactJS and Java</strong>.
-    Outside of work I really enjoy Cricket and Bollywood Movies.
+    ¡Hola, soy <strong class="font-normal text-orange-600">Engineer Systems</strong>. 
+    En esta web encontrarás muchos de <strong class="font-normal text-orange-600">Proyectos</strong> 
+    en los que he trabajado y <strong class="font-normal text-orange-600">Tecnologias </strong>con las que he trabajado asi como enlaces a mis demas plataformas.
   `,
   socialMedia: socialMediaPlatforms,
 };

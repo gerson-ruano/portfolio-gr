@@ -4,7 +4,7 @@
 
 @layer base {
   .light {
-    @apply bg-gray-300;
+    @apply bg-gray-100;
   }
   .dark {
     @apply bg-gray-900;
@@ -13,7 +13,8 @@
 
 @layer utilities {
   .custom-filter {
-    filter: invert(56%) sepia(93%) saturate(1700%) hue-rotate(346deg) brightness(97%) contrast(96%);
+    /*filter: invert(56%) sepia(93%) saturate(1700%) hue-rotate(346deg) brightness(97%) contrast(96%);*/
+    filter: invert(29%) sepia(88%) saturate(2552%) hue-rotate(200deg) brightness(92%) contrast(98%);
   }
 }
 
@@ -38,7 +39,7 @@
 
 .card-hover-effect:hover,
 .card-image-hover-effect:hover img{
-  @apply border-orange-500;
+  @apply border-blue-500;
 }
 
 .hover-lift:hover {
@@ -53,6 +54,9 @@
 .light #btn-moon,
 .dark #btn-sun {
   @apply block;
+  border: 1px solid blue; /* Borde azul */
+  border-radius: 8px; /* Esquinas redondeadas */
+
 }
 
 /* Theme toggle button inversion */
@@ -74,6 +78,5 @@
 }
 
 .icon-link:hover img {
-  @apply custom-filter;
+@apply custom-filter;
 }
-

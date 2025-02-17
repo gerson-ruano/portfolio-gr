@@ -22,7 +22,7 @@ const navItemsList: NavItemType[] = [
   {
     title: "Download CV",
     link: cvUrl,
-    additionalClasses: "border-2 rounded-xl p-1 border-orange-500 font-bold",
+    additionalClasses: "border-2 rounded-xl p-1 border-blue-500 font-bold",
   }
 ];
 

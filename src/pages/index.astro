@@ -33,7 +33,7 @@ const blogCollection = await getCollection("blogs");
         <article class="flex flex-col gap-8">
           <header class="flex w-full flex-row justify-between gap-2">
             <h3 class="text-lg">Latest posts</h3>
-            <Link href="/blog" label="More" isUnderline target="_self" />
+            <Link href="/blog" label="Mas" isUnderline target="_self" />
           </header>
           {
             blogCollection.length === 0 ? (
@@ -59,7 +59,7 @@ const blogCollection = await getCollection("blogs");
           </header>
           {
             Object.keys(skills).length === 0 ? (
-              <p class="text-xl text-orange-600">Soon, stay connected 👀...</p>
+              <p class="text-xl text-blue-600">Soon, stay connected 👀...</p>
             ) : (
               <section class="flex flex-col gap-4">
                 {skills?.map(({ type, skillGroup }: SkillCardProps) => (
@@ -75,7 +75,7 @@ const blogCollection = await getCollection("blogs");
             <h3 class="text-lg">
               Projects ({projects.length})
             </h3>
-            <Link href="/projects" label="More" isUnderline target="_self" />
+            <Link href="/projects" label="Mas" isUnderline target="_self" />
           </header>
           {
             projects.length === 0 ? (

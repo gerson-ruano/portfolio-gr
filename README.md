@@ -1,6 +1,6 @@
-# Astro Rang Portfolio Template
+# Portfolio GR
 
-A minimalist, responsive, and customizable portfolio template built with Astro and Tailwind CSS.
+Portafolio en ASTRO basado en ASTRO RANG.
 
 ## 🚀 Features
 
@@ -32,17 +32,22 @@ A minimalist, responsive, and customizable portfolio template built with Astro a
    cd astro-rang
    ```
 
-3. Install dependencies:
+3. Install yarn:
+   ```bash
+   npm install -g yarn
+   ```
+
+4. Install dependencies:
    ```bash
    yarn
    ```
 
-4. Start the development server:
+5. Start the development server:
    ```bash
    yarn dev
    ```
 
-5. Open your browser and visit `http://localhost:3000`
+6. Open your browser and visit `http://localhost:3000`
 
 ## 🔧 Customization
 

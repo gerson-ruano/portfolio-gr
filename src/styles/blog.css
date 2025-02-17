@@ -3,11 +3,11 @@
 }
 
 .blog code {
-  @apply rounded-sm px-1 py-[1px] text-orange-600;
+  @apply rounded-sm px-1 py-[1px] text-blue-600;
 }
 
 .blog h2 {
-  @apply mt-6 text-3xl text-orange-400;
+  @apply mt-6 text-3xl text-blue-400;
 }
 
 .blog h3 {
@@ -15,7 +15,7 @@
 }
 
 .blog a {
-  @apply underline underline-offset-4 decoration-orange-500;
+  @apply underline underline-offset-4 decoration-blue-500;
 }
 
 .blog ul {
@@ -27,7 +27,7 @@
 }
 
 .blog blockquote {
-  @apply flex flex-row gap-2 before:block before:h-auto before:w-1 before:max-w-[1px] before:bg-orange-600 before:content-[''];
+  @apply flex flex-row gap-2 before:block before:h-auto before:w-1 before:max-w-[1px] before:bg-blue-600 before:content-[''];
 }
 
 .blog pre {

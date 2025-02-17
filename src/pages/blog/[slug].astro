@@ -24,7 +24,7 @@ const { Content } = await blog.render();
 <Layout title={blog.data.title}>
   <div class="blog mx-auto flex w-full px-4 flex-col gap-4">
     <header role="presentation">
-      <h1 class="text-md text-orange-400">
+      <h1 class="text-md text-blue-400">
         {blog.data.title} - {formatDate(blog.data.publishedAt)}
       </h1>
       <p class="italic">{blog.data.description}</p>
