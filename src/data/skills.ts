@@ -35,6 +35,12 @@ export enum IconName {
   Mongodb = "icon-[logos--mongodb-icon]",
   Docker = "icon-[logos--docker-icon]",
   Vim = "icon-[logos--vim]",
+  Php = "icon-[logos--php]",
+  Livewire = "icon-[logos--livewire-icon]",
+  Laravel = "icon-[logos--laravel]",
+  Tailwindcss = "icon-[logos--tailwindcss]",
+  Bookstack = "icon-[logos--bookstack]",
+  Proxmox = "icon-[logos--proxmox]",
 }
 
 export type Skills = SkillCardProps[];
@@ -43,16 +49,6 @@ const skills: Skills = [
   {
     type: "Programming Languages",
     skillGroup: [ 
-      {
-        name: "TypeScript",
-        icon: IconName["TS"],
-        colorClass: "text-slate-800 bg-orange-100",
-      },
-      {
-        name: "Java",
-        icon: IconName["Java"],
-        colorClass: "text-slate-900 bg-lime-50",
-      },
       {
         name: "JavaScript",
         icon: IconName["JS"],
@@ -63,26 +59,51 @@ const skills: Skills = [
         icon: IconName["Python"],
         colorClass: "text-slate-50 bg-red-500",
       },
+      {
+        name: "Php",
+        icon: IconName["Php"],
+        colorClass: "text-slate-50 bg-blue-500",
+      },
     ],
   },
   {
     type: "Libraries / Framework",
     skillGroup: [
       {
-        name: "React",
-        icon: IconName["React"],
-        colorClass: "text-slate-50 bg-blue-600",
+        name: "Laravel",
+        icon: IconName["Laravel"],
+        colorClass: "text-slate-900 bg-lime-50",
+      },
+      {
+        name: "Tailwind",
+        icon: IconName["Tailwindcss"],
+        colorClass: "text-slate-900 bg-lime-100",
       },
       {
         name: "Node.js",
         icon: IconName["Nodejs"],
         colorClass: "text-slate-900 bg-slate-200",
       },
+      {
+        name: "Livewire",
+        icon: IconName["Livewire"],
+        colorClass: "text-slate-900 bg-orange-200",
+      },
     ],
   },
   {
     type: "Tools",
     skillGroup: [
+      {
+        name: "Proxmox",
+        icon: IconName["Proxmox"],
+        colorClass: "text-slate-800 bg-orange-200",
+      },
+      {
+        name: "Linux",
+        icon: IconName["Linux"],
+        colorClass: "text-slate-800 bg-dark-200",
+      },
       {
         name: "Git",
         icon: IconName["Git"],
@@ -93,6 +114,11 @@ const skills: Skills = [
         icon: IconName["Docker"],
         colorClass: "text-slate-50 bg-orange-700",
       },
+      {
+        name: "Bookstack",
+        icon: IconName["Bookstack"],
+        colorClass: "text-slate-50 bg-blue-700",
+      },
     ],
   },
   {
@@ -102,6 +128,11 @@ const skills: Skills = [
         name: "PostgreSQL",
         icon: IconName["Postgresql"],
         colorClass: "text-slate-800 bg-blue-300",
+      },
+      {
+        name: "Mysql",
+        icon: IconName["Mysql"],
+        colorClass: "text-slate-800 bg-red-300",
       },
     ],
   },

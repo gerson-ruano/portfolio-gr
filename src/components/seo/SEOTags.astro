@@ -18,9 +18,9 @@ type Props = {
 
 const { title, description, noindex, og } = Astro.props;
 
-const DEFAULT_TITLE_PAGE = "Anil Kumble | SDE ";
+const DEFAULT_TITLE_PAGE = "Gerson Ruano | Ing ";
 const DEFAULT_DESCRIPTION_PAGE =
-  "Anil Kuble's minimalistic portfolio";
+  "minimalistic portfolio";
 const DEFAULT_URL_SITE = SITE_URL;
 
 const openGraph = {
@@ -50,7 +50,7 @@ const openGraph = {
       },
     }}
     twitter={{
-      creator: "@chaturrved",
+      creator: "@GersonruanO",
     }}
     extend={{
       link: [{ rel: "icon", href: "/favicon.svg" }],
@@ -64,7 +64,7 @@ const openGraph = {
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: openGraph.title },
         { name: "twitter:description", content: openGraph.description },
-        { name: "twitter:site", content: "@chaturrved" },
+        { name: "twitter:site", content: "@GersonruanO" },
       ],
     }}
   />

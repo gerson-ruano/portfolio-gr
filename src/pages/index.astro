@@ -23,7 +23,7 @@ const blogCollection = await getCollection("blogs");
     <div class="py-4 md:flex-grow">
       <div class="flex max-w-[872px] min-h-lvh flex-col gap-20">
         <article class="flex flex-col gap-8">
-          <h3 class="text-lg">About me</h3>
+          <h3 class="text-lg">Acerca de mi</h3>
           <h2
             class="max-w-[80ch] leading-6"
             set:html={presentation.description}
@@ -32,7 +32,7 @@ const blogCollection = await getCollection("blogs");
 
         <article class="flex flex-col gap-8">
           <header class="flex w-full flex-row justify-between gap-2">
-            <h3 class="text-lg">Latest posts</h3>
+            <h3 class="text-lg">Ultimas publicaciones</h3>
             <Link href="/blog" label="Mas" isUnderline target="_self" />
           </header>
           {
