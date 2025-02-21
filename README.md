@@ -24,7 +24,7 @@ Portafolio en ASTRO basado en ASTRO RANG.
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/chaturrved/astro-rang.git
+   git clone https://github.com/gerson-ruano/portfolio-gr.git
    ```
 
 2. Navigate to the project directory:
@@ -77,10 +77,5 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🙏 Acknowledgements
 
-This template was inspired by various open-source projects and the Astro community. Special thanks to all contributors and maintainers of the technologies used in this project.
+This template was inspired by project and the Astro https://github.com/chaturrved/astro-rang.git, used in this project.
 
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/chaturrved/astro-rang/issues).
-
-Happy coding! 🚀

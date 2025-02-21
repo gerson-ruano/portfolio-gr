@@ -14,6 +14,11 @@ const experiences = [
         role: "Ingeniero en Sistemas",
         period: "2015-2020",
       },
+      {
+        company: "UMG Guatemala",
+        role: "Master en Informatica con enfoque en Telecomunicaciones",
+        period: "2021-2022",
+      },
     ],
   },
 ];

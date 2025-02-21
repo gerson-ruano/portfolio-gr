@@ -36,7 +36,7 @@ export enum IconName {
   Docker = "icon-[logos--docker-icon]",
   Vim = "icon-[logos--vim]",
   Php = "icon-[logos--php]",
-  Livewire = "icon-[logos--livewire-icon]",
+  Livewire = "icon-[logos--livewire]",
   Laravel = "icon-[logos--laravel]",
   Tailwindcss = "icon-[logos--tailwindcss]",
   Bookstack = "icon-[logos--bookstack]",
@@ -102,7 +102,7 @@ const skills: Skills = [
       {
         name: "Linux",
         icon: IconName["Linux"],
-        colorClass: "text-slate-800 bg-dark-200",
+        colorClass: "text-slate-800 bg-gray-200",
       },
       {
         name: "Git",
