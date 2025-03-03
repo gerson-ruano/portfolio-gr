@@ -5,6 +5,7 @@ type Props = Skill;
 const {
   name,
   icon,
+  isLocal,
   experience,
   colorClass = "text-slate-800 bg-blue-100",
 } = Astro.props;
@@ -12,11 +13,13 @@ const {
 
 <>
   <span
-    class=`inline-flex items-center justify-center m-2 px-2 py-1 mr-2 text-xs font-bold leading-none ${colorClass} rounded-full`
+    class={`inline-flex items-center justify-center m-2 px-2 py-1 mr-2 text-xs font-bold leading-none ${colorClass} rounded-full`}
   >
-    <span class={icon}></span>
-    <span class="ml-1">
-      {name}
-    </span>
+    {isLocal ? (
+      <img src={icon} alt={name} class="w-3 h-3" />
+    ) : (
+      <span class={icon}></span>
+    )}
+    <span class="ml-1">{name}</span>
   </span>
 </>

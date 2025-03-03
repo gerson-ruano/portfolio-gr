@@ -1,35 +1,58 @@
 ---
 
-title: "The Art of Clean Code: Principles for Maintainable Software"
-publishedAt: 2023-11-10
-description: "Learn timeless principles for writing clean, maintainable, and efficient code"
-slug: "art-of-clean-code-principles-maintainable-software"
+title: "PHP Filament: La Solución Ideal para Crear Back Offices Eficientes en Laravel"
+publishedAt: 2025-01-03
+description: "Filament PHP es una herramienta poderosa que permite a las empresas optimizar sus back offices con rapidez y eficacia."
+slug: "php-filament-la-solución-ideal-para-crear-back-offices-eficientes"
 isPublished: true
-imagePath: "../../assets/blogcover.jpg"
+imagePath: "../../assets/filament.png"
 ---
 
-## The Importance of Code Readability
+## ¿Qué es Filament PHP?
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+Es una colección de componentes full-stack diseñados para facilitar la creación de paneles de administración en Laravel. 
+Su flexibilidad y facilidad de uso lo convierten en una herramienta perfecta para construir back offices con rapidez.
 
-### SOLID Principles in Action
+### Automatización de Procesos Repetitivos
 
-```typescript
-interface Shape {
-  calculateArea(): number;
-}
+```php
+	/**
+	 * Función para ver la tabla con la información
+	 * @param  Table  $table [description]
+	 * @return [type]        [description]
+	 */
+	public static function table(Table $table): Table {
+		return $table
+		// Columnas
+			->columns([
+				TextColumn::make('titulo'),
+				TextColumn::make('contenido'),
+			])
+			//Filtros
+			->filters([
+				//
+			])
+			->actions([
+				Tables\Actions\EditAction::make(),
+			])
+			->bulkActions([
+				Tables\Actions\BulkActionGroup::make([
+					Tables\Actions\DeleteBulkAction::make(),
+				]),
+			])
+			->emptyStateActions([
+				Tables\Actions\CreateAction::make(),
+			]);
+	}
 
-class Circle implements Shape {
-  constructor(private radius: number) {}
-
-  calculateArea(): number {
-    return Math.PI * this.radius ** 2;
-  }
-}
 ```
 
-> Clean code isn't about perfection; it's about crafting code that others (including your future self) can easily understand and modify.
+> Generación automática de CRUD: Simplifica la creación de interfaces de administración con operaciones CRUD.
+> Integración perfecta con Laravel: Al ser nativo de Laravel, permite aprovechar las potentes características de este framework.
+> Totalmente personalizable: Ajusta las interfaces según las necesidades de tu aplicación, ideal para la gestión de back office support.
 
-## The Power of Meaningful Names
+## Personalización
+La adaptabilidad es uno de los puntos fuertes de Filament. Puedes personalizar cada componente del back office según las necesidades específicas de tu negocio, lo que permite la integración de módulos como un back office support para gestionar incidencias, o funciones especializadas para la administración de ventas.
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## Fuente  12/11/2024
+https://www.linkedin.com/pulse/php-filament-la-soluci%C3%B3n-ideal-para-crear-back-offices-eficientes-ajyff/ 

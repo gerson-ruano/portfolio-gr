@@ -1,17 +1,17 @@
 ---
-title: "Desarrollador Laravel: Advanced Tips and Tricks"
+title: "Ventas GR: Advanced Sales System"
 publishedAt: 2024-09-15
-description: "Desarrollo de multiples modulos de sistema"
-slug: "mastering-typescript-advanced-tips-and-tricks"
+description: "Desarrollo de multiples modulos de sistema VentasGR"
+slug: "desarrollo-de-multiples-modulos-de-sistema-ventasgr"
 isPublished: true
 imagePath: "../../assets/ventasgr.png"
 ---
 
-## Leveraging TypeScript's Type System
+## Creado utilizando la version 11 de Laravel
 
-Creación de Sistema de Ventas en Laravel con variedad de modulos para manejo de inventarios gestion de usuarios y privilegios.
+Aplicación que permite gestionar productos y ventas de los mismos, administracion de roles y permisos de usuarios para ingreso al sistema asi como compras de productos existentes, visualizaciòn de dashboard.
 
-### Union Types and Type Guards
+### Gestion de Carrito de productos
 
 ```php
 public function updateQuantityProducts()
@@ -23,8 +23,8 @@ public function updateQuantityProducts()
     }
 ```
 
-> TypeScript's type system is a powerful tool for catching errors early and improving code quality.
+> Usando Laravel, puedes separar las capas de presentación de la lógica de negocios usando un marco MVC.
 
-## Generics in php
+## Optimiza el tiempo de desarrollo en php
 
-Suspendisse potenti. Sed auctor, magna a bibendum bibendum, augue augue tincidunt augue, nec tincidunt augue augue eget augue.
+En Laravel hay una serie de funciones y estructuras preconstruidas que cumplen con los estándares actuales de PHP, lo que hace posible que los desarrolladores creen aplicaciones web responsivas muy rápidamente. .

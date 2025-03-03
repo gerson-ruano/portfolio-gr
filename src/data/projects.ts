@@ -19,25 +19,32 @@ const projects: Project[] = [
     title: "Ventas Lite",
     techs: ["Laravel", "Mysql"],
     link: "/",
-    isComingSoon: true,
+    repoUrl: "https://github.com/gerson-ruano/ventaslite.git",
+    imageUrl: "/assets/images/ventaslite.png"
+    //isComingSoon: true,
   },
   {
     title: "JWT Aut Laravel",
     techs: ["Laravel", "Mysql"],
     link: "/",
     repoUrl: "https://github.com/gerson-ruano/jwt-laravel.git",
+    imageUrl: "/assets/images/jwt-laravel.png"
   },
   {
     title: "Cursos",
     techs: ["Laravel", "Mysql"],
-    link: "https://github.com/gerson-ruano/cursos.git",
+    link: "/",
+    repoUrl: "https://github.com/gerson-ruano/cursos.git",
+    imageUrl: "/assets/images/cursos.png"
   },
+  /*
   {
-    title: "Evaluador de creditos",
+    title: "Evaluaciòn de Creditos",
     techs: ["Java", "Mysql"],
-    link: "https://github.com/gerson-ruano/Evaluacion-de-credito.git",
-    isComingSoon: true,
-  },
+    link: "/",
+    repoUrl: "https://github.com/gerson-ruano/Evaluacion-de-credito.git",
+    imageUrl: "/assets/images/contactApp.png"
+  },*/
 ];
 
 export default projects;

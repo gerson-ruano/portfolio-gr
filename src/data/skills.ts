@@ -7,6 +7,7 @@ export type SkillType =
 export type Skill = {
   name: string;
   icon: string;
+  isLocal?: boolean;
   experience?: number;
   colorClass?: string;
 };
@@ -36,11 +37,12 @@ export enum IconName {
   Docker = "icon-[logos--docker-icon]",
   Vim = "icon-[logos--vim]",
   Php = "icon-[logos--php]",
-  Livewire = "icon-[logos--livewire]",
   Laravel = "icon-[logos--laravel]",
   Tailwindcss = "icon-[logos--tailwindcss]",
-  Bookstack = "icon-[logos--bookstack]",
-  Proxmox = "icon-[logos--proxmox]",
+
+  Livewire = "/assets/svg/icons/livewire.svg",
+  Bookstack = "/assets/svg/icons/bookstack.svg",
+  Proxmox = "/assets/svg/icons/proxmox.svg",
 }
 
 export type Skills = SkillCardProps[];
@@ -86,7 +88,8 @@ const skills: Skills = [
       },
       {
         name: "Livewire",
-        icon: IconName["Livewire"],
+        icon: IconName.Livewire,
+        isLocal: true,
         colorClass: "text-slate-900 bg-orange-200",
       },
     ],
@@ -96,7 +99,8 @@ const skills: Skills = [
     skillGroup: [
       {
         name: "Proxmox",
-        icon: IconName["Proxmox"],
+        icon: IconName.Proxmox,
+        isLocal: true,
         colorClass: "text-slate-800 bg-orange-200",
       },
       {
@@ -116,7 +120,8 @@ const skills: Skills = [
       },
       {
         name: "Bookstack",
-        icon: IconName["Bookstack"],
+        icon: IconName.Bookstack,
+        isLocal: true,
         colorClass: "text-slate-50 bg-blue-700",
       },
     ],
