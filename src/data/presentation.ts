@@ -21,24 +21,24 @@ type Presentation = {
 };
 
 const socialMediaPlatforms: SocialMediaPlatform[] = [
-  {
+  /*{
     type: SocialType.twitter,
     url: 'https://twitter.com/xxx',
     icon: '/assets/svg/icons/x.svg',
-  },
+  },*/
   {
     type: SocialType.gitHub,
-    url: 'https://github.com/',
+    url: 'https://github.com/gerson-ruano',
     icon: '/assets/svg/icons/github.svg',
   },
   {
     type: SocialType.email,
-    url: 'xxx@email.com',
+    url: 'toge619@gmail.com',
     icon: '/assets/svg/icons/email.svg',
   },
   {
     type: SocialType.linkedIn,
-    url: 'https://www.linkedin.com/',
+    url: 'https://www.linkedin.com/in/gerson-ruano',
     icon: '/assets/svg/icons/linkedin.svg',
   },
   // {
@@ -53,9 +53,10 @@ const presentation: Presentation = {
   mail: "toge619@gmail.com",
   title: "Engineer Systems",
   description: `
-    ¡Hola, soy <strong class="font-normal text-orange-600">Engineer Systems</strong>. 
-    En esta web encontrarás muchos de <strong class="font-normal text-orange-600">Proyectos</strong> 
-    en los que he trabajado y <strong class="font-normal text-orange-600">Tecnologias </strong>con las que he trabajado asi como enlaces a mis demas plataformas.
+    ¡Hola, soy <strong class="font-bold text-blue-700">Ingeniero en Sistemas</strong>. 
+    En esta web encontrarás muchos de mis <strong class="font-bold text-blue-700">Proyectos</strong> 
+    en los que he trabajado y <strong class="font-bold text-blue-700">Tecnologias </strong>con las que he trabajado 
+    asi como <strong class="font-bold text-blue-700"> enlaces</strong> a mis demas plataformas.
   `,
   socialMedia: socialMediaPlatforms,
 };
