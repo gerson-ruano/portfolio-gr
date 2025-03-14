@@ -1,5 +1,5 @@
 ---
-title: "Ventas GR: Advanced Sales System"
+title: "Ventas GR: Sistema de Ventas"
 publishedAt: 2024-09-15
 description: "Desarrollo de multiples modulos de sistema VentasGR"
 slug: "desarrollo-de-multiples-modulos-de-sistema-ventasgr"

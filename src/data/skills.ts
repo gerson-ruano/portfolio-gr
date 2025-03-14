@@ -77,7 +77,7 @@ const skills: Skills = [
         colorClass: "text-slate-900 bg-lime-50",
       },
       {
-        name: "Tailwind",
+        name: "",
         icon: IconName["Tailwindcss"],
         colorClass: "text-slate-900 bg-lime-100",
       },

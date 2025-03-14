@@ -25,6 +25,19 @@ import ThemeIcon from "@/components/ThemeIcon.astro";
       </ul>
     </nav>
     <ThemeIcon />
+    <div class="relative flex items-center">
+      <button id="translate-button" class="p-2 text-xl hover:text-blue-500">
+        🌍
+      </button>
+      <!-- Google Translate Element -->
+      <div id="google_translate_element" class="absolute top-10 right-0 hidden"></div>
+    </div>
+
+    <!-- Botón para cambiar idioma -->
+    <!--button id="lang-toggle" class="p-2 text-xl hover:text-blue-500">
+      💬
+    </button-->
+
     <button class="md:hidden" aria-label="menu-icon">
       <svg
         class="block h-4 w-4 fill-current"
@@ -52,24 +65,60 @@ import ThemeIcon from "@/components/ThemeIcon.astro";
 </ul>
 
 <script>
-  let menuOpen = false;
-
-  function toggleMenu() {
-    const menu = document.querySelector('ul[aria-label="menu"]');
-    if (menu) {
-      menuOpen = !menuOpen;
-      menu.classList.toggle("hidden", !menuOpen);
+// Cargar el script de Google Translate
+  function loadGoogleTranslate() {
+    if (!window.google || !window.google.translate) {
+      var script = document.createElement("script");
+      script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      script.async = true;
+      document.body.appendChild(script);
     }
   }
 
-  document.addEventListener("astro:page-load", () => {
-    const burger = document.querySelector('button[aria-label="menu-icon"]');
-    if (burger) {
-      burger.addEventListener("click", toggleMenu);
+  // Inicialización del widget de Google Translate
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      {
+        pageLanguage: "es", 
+        includedLanguages: "en,fr,de", // Idiomas disponibles
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false // Evitar que se muestre automáticamente
+      },
+      "google_translate_element"
+    );
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    loadGoogleTranslate();
+
+    // Cuando se hace clic en el botón 🌍, mostrar/ocultar el selector de idiomas
+    document.getElementById("translate-button").addEventListener("click", function () {
+      const translateElement = document.getElementById("google_translate_element");
+      if (translateElement) {
+        translateElement.classList.toggle("hidden"); // Alternar visibilidad
+      }
+    });
+
+    let menuOpen = false;
+
+    function toggleMenu() {
+      const menu = document.querySelector('ul[aria-label="menu"]');
+      if (menu) {
+        menuOpen = !menuOpen;
+        menu.classList.toggle("hidden", !menuOpen);
+      }
     }
 
-    // Preserve menu state across page transitions
-    const menuItems = document.querySelectorAll('ul[aria-label="menu"] li');
-    menuItems.forEach((item) => item.addEventListener("click", toggleMenu));
+    document.addEventListener("astro:page-load", () => {
+      const burger = document.querySelector('button[aria-label="menu-icon"]');
+      if (burger) {
+        burger.addEventListener("click", toggleMenu);
+      }
+
+      // Preserve menu state across page transitions
+      const menuItems = document.querySelectorAll('ul[aria-label="menu"] li');
+      menuItems.forEach((item) => item.addEventListener("click", toggleMenu));
+    });
   });
 </script>
+
