@@ -11,6 +11,8 @@ import presentation from "@/data/presentation";
 import projects from "@/data/projects";
 import skills from "@/data/skills";
 import { type SkillCardProps } from "@/data/skills";
+import certificates from "@/data/certificates";
+import CertificateBanner from "@/components/CertificateBanner.astro";
 
 const blogCollection = await getCollection("blogs");
 ---
@@ -84,6 +86,26 @@ const blogCollection = await getCollection("blogs");
               <section class="flex flex-col gap-4">
                 {projects.slice(0, 3).map((project) => (
                   <ProjectBanner {...project} />
+                ))}
+              </section>
+            )
+          }
+        </article>
+
+        <article class="flex flex-col gap-8">
+          <header class="flex w-full flex-row justify-between gap-2">
+            <h3 class="text-lg">
+              Certificates ({certificates.length})
+            </h3>
+            <Link href="/certificates" label="More" isUnderline target="_self" />
+          </header>
+          {
+            certificates.length === 0 ? (
+              <p>Soon, stay connected 👀...</p>
+            ) : (
+              <section class="flex flex-col gap-4">
+                {certificates.slice(0, 3).map((certificate) => (
+                  <CertificateBanner {...certificate} />
                 ))}
               </section>
             )

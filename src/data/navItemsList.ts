@@ -20,6 +20,10 @@ const navItemsList: NavItemType[] = [
     link: "/projects"
   },
   {
+    title: "Certificates",
+    link: "/certificates"
+  },
+  {
     title: "Download CV",
     link: cvUrl,
     additionalClasses: "border-2 rounded-xl p-1 border-blue-500 font-bold",

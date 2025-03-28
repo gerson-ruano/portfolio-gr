@@ -1,0 +1,15 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import certificates from "@/data/certificates";
+import CertificateCard from "@/components/CertificateCard.astro";
+---
+
+<Layout title="Gerson Ruano | Certificates">
+  <h1 class="text-3xl font-bold py-2">Certificates</h1>
+  <div class="flex flex-col items-center min-h-lvh">
+    {certificates.length === 0 && <p>Soon, stay connected 👀...</p>}
+    <div class="grid grid-cols-1 gap-8 py-4 sm:grid-cols-2 lg:grid-cols-3">
+      {certificates.map((certificate) => <CertificateCard {...certificate} />)}
+    </div>
+  </div>
+</Layout>

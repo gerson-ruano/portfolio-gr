@@ -25,18 +25,44 @@ import ThemeIcon from "@/components/ThemeIcon.astro";
       </ul>
     </nav>
     <ThemeIcon />
-    <div class="relative flex items-center">
+    <!--div class="relative flex items-center">
       <button id="translate-button" class="p-2 text-xl hover:text-blue-500">
         🌍
       </button>
       <!-- Google Translate Element -->
-      <div id="google_translate_element" class="absolute top-10 right-0 hidden"></div>
-    </div>
+      <!--div id="google_translate_element" class="absolute top-10 right-0 hidden"></div>
+    </div-->
 
-    <!-- Botón para cambiar idioma -->
-    <!--button id="lang-toggle" class="p-2 text-xl hover:text-blue-500">
-      💬
-    </button-->
+    <!--div class="relative flex items-center">
+      <button id="translate-button" class="p-2 text-xl hover:text-blue-500">
+        🌍
+      </button>
+      <!-- Google Translate Element -->
+      <!--div id="google_translate_element" class="absolute top-10 right-0 hidden z-50 bg-white shadow-lg p-4 rounded-lg">
+        <!-- Selector de idiomas de Google Translate -->
+        <!--div class="mb-2">
+          <label class="block text-sm font-medium text-gray-700">Seleccionar idioma:</label>
+          <!--select class="goog-te-combo mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+            
+          </select>
+        </div-->
+        
+        <!-- Botones de selección rápida de idioma -->
+        <!--div class="flex space-x-2 mt-2">
+          <button data-lang="en" class="language-quick-select px-2 py-1 bg-blue-500 text-white rounded hover:bg-blue-600">
+            English 🇬🇧
+          </button>
+          <button data-lang="es" class="language-quick-select px-2 py-1 bg-blue-500 text-white rounded hover:bg-blue-600">
+            Español 🇪🇸
+          </button>
+        </div> 
+        
+        <!-- Botón para restaurar al idioma original -->
+        <!--button onclick="resetLanguage()" class="mt-2 w-full px-2 py-1 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">
+          Restaurar idioma original
+        </button>
+      </div>
+    </div-->
 
     <button class="md:hidden" aria-label="menu-icon">
       <svg
@@ -65,60 +91,120 @@ import ThemeIcon from "@/components/ThemeIcon.astro";
 </ul>
 
 <script>
-// Cargar el script de Google Translate
-  function loadGoogleTranslate() {
-    if (!window.google || !window.google.translate) {
-      var script = document.createElement("script");
-      script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-      script.async = true;
-      document.body.appendChild(script);
-    }
-  }
-
-  // Inicialización del widget de Google Translate
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement(
-      {
-        pageLanguage: "es", 
-        includedLanguages: "en,fr,de", // Idiomas disponibles
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false // Evitar que se muestre automáticamente
-      },
-      "google_translate_element"
-    );
-  }
-
   document.addEventListener("DOMContentLoaded", function () {
-    loadGoogleTranslate();
-
-    // Cuando se hace clic en el botón 🌍, mostrar/ocultar el selector de idiomas
-    document.getElementById("translate-button").addEventListener("click", function () {
-      const translateElement = document.getElementById("google_translate_element");
-      if (translateElement) {
-        translateElement.classList.toggle("hidden"); // Alternar visibilidad
+    // Función para cargar el script de Google Translate
+    function loadGoogleTranslate() {
+      return new Promise((resolve, reject) => {
+        // Si Google Translate ya está cargado
+        if (window.google?.translate) {
+          resolve();
+          return;
+        }
+  
+        const script = document.createElement("script");
+        script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+        script.async = true;
+        script.onload = () => resolve();
+        script.onerror = () => reject(new Error('No se pudo cargar Google Translate'));
+        document.body.appendChild(script);
+      });
+    }
+  
+    // Mantener una referencia al widget de traducción
+    let translateWidget = null;
+  
+    // Inicialización del widget de Google Translate
+    window.googleTranslateElementInit = function() {
+      if (window.google?.translate) {
+        translateWidget = new google.translate.TranslateElement(
+          {
+            pageLanguage: "es", // Idioma original
+            includedLanguages: "en,es", // Solo español e inglés
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+          },
+          "google_translate_element"
+        );
       }
-    });
-
-    let menuOpen = false;
-
-    function toggleMenu() {
-      const menu = document.querySelector('ul[aria-label="menu"]');
-      if (menu) {
-        menuOpen = !menuOpen;
-        menu.classList.toggle("hidden", !menuOpen);
+    };
+  
+    // Función para cambiar el idioma
+    function changeLanguage(langCode) {
+      const translateSelect = document.querySelector('.goog-te-combo');
+      if (translateSelect) {
+        translateSelect.value = langCode;
+        translateSelect.dispatchEvent(new Event('change'));
       }
     }
-
-    document.addEventListener("astro:page-load", () => {
-      const burger = document.querySelector('button[aria-label="menu-icon"]');
-      if (burger) {
-        burger.addEventListener("click", toggleMenu);
+  
+    // Función para restaurar el idioma original
+    function resetLanguage() {
+      changeLanguage('es');
+      const translateElement = document.getElementById("google_translate_element");
+      translateElement?.classList.add('hidden');
+    }
+  
+    // Inicialización de la funcionalidad de traducción
+    async function initTranslation() {
+      try {
+        await loadGoogleTranslate();
+  
+        const translateButton = document.getElementById("translate-button");
+        const translateElement = document.getElementById("google_translate_element");
+  
+        // Función para reiniciar el widget de traducción
+        function resetTranslateWidget() {
+          if (translateWidget) {
+            translateWidget.dispose();
+          }
+          
+          // Limpiar el contenedor
+          const container = document.getElementById("google_translate_element");
+          if (container) {
+            container.innerHTML = '';
+          }
+  
+          // Reiniciar el widget
+          window.googleTranslateElementInit();
+        }
+  
+        // Toggle de menú de traducción
+        if (translateButton && translateElement) {
+          translateButton.addEventListener("click", () => {
+            translateElement.classList.toggle("hidden");
+            
+            // Si se muestra, reiniciar el widget para asegurar su funcionamiento
+            if (!translateElement.classList.contains('hidden')) {
+              resetTranslateWidget();
+            }
+          });
+        }
+  
+        // Botones de selección rápida de idioma
+        const languageButtons = document.querySelectorAll('.language-quick-select');
+        languageButtons.forEach(button => {
+          button.addEventListener('click', (e) => {
+            const langCode = e.target.dataset.lang;
+            if (langCode) {
+              changeLanguage(langCode);
+              translateElement?.classList.add('hidden');
+            }
+          });
+        });
+  
+        // Botón de restaurar idioma
+        const resetButton = document.querySelector('button[onclick="resetLanguage()"]');
+        resetButton?.addEventListener('click', () => {
+          resetLanguage();
+          resetTranslateWidget();
+        });
+  
+      } catch (error) {
+        console.error("Error inicializando traducción:", error);
       }
-
-      // Preserve menu state across page transitions
-      const menuItems = document.querySelectorAll('ul[aria-label="menu"] li');
-      menuItems.forEach((item) => item.addEventListener("click", toggleMenu));
-    });
+    }
+  
+    // Inicializar traducción
+    initTranslation();
   });
-</script>
-
+  </script>
