@@ -49,6 +49,20 @@ const formatSkills = (values: string[]) =>
               />
             </a>
           )}
+          {imageUrl && (
+          <a
+            class="icon-link"
+            href={imageUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="size-14 p-1 md:size-10"
+              src="/assets/svg/icons/open.svg"
+              alt="git repo url"
+            />
+          </a>
+        )}
           {link && (
             <a
               class="icon-link"

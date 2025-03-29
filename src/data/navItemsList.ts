@@ -20,14 +20,14 @@ const navItemsList: NavItemType[] = [
     link: "/projects"
   },
   {
-    title: "Certificates",
+    title: "Courses",
     link: "/certificates"
   },
   {
-    title: "Download CV",
+    title: "CV",
     link: cvUrl,
-    additionalClasses: "border-2 rounded-xl p-1 border-blue-500 font-bold",
-  }
+    additionalClasses: "border-2 rounded-xl border-blue-500",
+  },
 ];
 
 export default navItemsList;

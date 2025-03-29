@@ -51,11 +51,13 @@ const socialMediaPlatforms: SocialMediaPlatform[] = [
 const presentation: Presentation = {
   name: "Gerson Ruano",
   mail: "toge619@gmail.com",
-  title: "Engineer Systems",
+  title: "Systems Analyst / Developer",
   description: `
-    ¡Hola, soy <strong class="font-bold text-blue-700">Ingeniero en Sistemas</strong>. 
-    En esta web encontrarás muchos de mis <strong class="font-bold text-blue-700">Proyectos</strong> 
-    en los que he trabajado y <strong class="font-bold text-blue-700">Tecnologias </strong>con las que he trabajado 
+    ¡Hola, soy <strong class="font-bold text-blue-700">Gerson Ruano</strong>
+    En esta web encontrarás algunas de mis <strong class="font-bold text-blue-700">publicaciones</strong> 
+    que me parecen interesantes, <strong class="font-bold text-blue-700">proyectos</strong> en los que he trabajado, 
+    <strong class="font-bold text-blue-700">cursos /certificaciones </strong> que he tomado y obtenido certificados 
+    <strong class="font-bold text-blue-700">Tecnologias </strong> y diferentes herramientas con las que he trabajado 
     asi como <strong class="font-bold text-blue-700"> enlaces</strong> a mis demas plataformas.
   `,
   socialMedia: socialMediaPlatforms,

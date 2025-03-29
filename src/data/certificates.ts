@@ -3,8 +3,8 @@ export type Certificate = {
   
   techs: string[];
   link: string;
-  emission: string[];
-  repoUrl?: string;
+  period: string[];
+  document?: string;
   imageUrl?: string;
   isComingSoon?: boolean;
 };
@@ -13,44 +13,28 @@ const certificates: Certificate[] = [
   {
     title: "Integración API de Facturación Electrónica de Factus",
     techs: ["HALLTEC"],
-    emission: ["Emisión - Ene 2025 "," Expira - No"],
+    period: ["Emisión - Ene 2025 "," Expira - No"],
     link: "https://halltec.co/reto-factus-content-173.html",
-    repoUrl: "/assets/images/contactApp.png",
-    imageUrl: "/assets/images/contactApp.png"
+    document: "/assets/images/factus_api.png",
+    imageUrl: "/assets/images/factus_api.png"
   },
   {
-    title: "Ventas Lite",
-    techs: ["Laravel", "Mysql"],
-    emission: ["Emisión - Ene 2025 "," Expira - No"],
-    link: "/",
-    repoUrl: "https://github.com/gerson-ruano/ventaslite.git",
-    imageUrl: "/assets/images/ventaslite.png",
-    //isComingSoon: true,
+    title: "Fortinet Certified Fundamentals in Cybersecurity",
+    techs: ["Fortinet"],
+    period: ["Emisión - Sep 2022 "," Expira - Sep 2024 "," ID - 0707142753GR"],
+    link: "https://training.fortinet.com/admin/tool/certificate/index.php?id=0707142753GR",
+    document: "/assets/images/ffc_fortinet.png",
+    imageUrl: "/assets/images/ffc_fortinet.png",
+    //isComingSoon: true, //no tiene el repositorio
   },
   {
-    title: "JWT Aut Laravel",
-    techs: ["Laravel", "Mysql"],
-    emission: ["Emisión - Ene 2025 "," Expira - No"],
-    link: "/",
-    repoUrl: "https://github.com/gerson-ruano/jwt-laravel.git",
-    imageUrl: "/assets/images/jwt-laravel.png"
+    title: "Scrum Fundamentals Certified",
+    techs: ["SCRUMstudy"],
+    period: ["Emisión - May 2024 "," Expira - May 2026 "," ID - 1031170"],
+    link: "https://c46e136a583f7e334124-ac22991740ab4ff17e21daf2ed577041.ssl.cf1.rackcdn.com/Certificate/ScrumFundamentalsCertified-GersonRocaelRuanoHernandez-1031170.pdf",
+    document: "/assets/images/scrum_fundamentals.png",
+    imageUrl: "/assets/images/scrum_fundamentals.png"
   },
-  {
-    title: "Cursos",
-    techs: ["Laravel", "Mysql"],
-    emission: ["Emisión - Ene 2025 "," Expira - No"],
-    link: "/",
-    repoUrl: "https://github.com/gerson-ruano/cursos.git",
-    imageUrl: "/assets/images/cursos.png"
-  },
-  /*
-  {
-    title: "Evaluaciòn de Creditos",
-    techs: ["Java", "Mysql"],
-    link: "/",
-    repoUrl: "https://github.com/gerson-ruano/Evaluacion-de-credito.git",
-    imageUrl: "/assets/images/contactApp.png"
-  },*/
 ];
 
 export default certificates;

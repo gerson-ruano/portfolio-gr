@@ -11,31 +11,31 @@ const projects: Project[] = [
   {
     title: "Contact App",
     techs: ["Python","Flask","Mysql"],
-    link: "https://github.com/gerson-ruano",
+    link: "/projects",
     repoUrl: "https://github.com/gerson-ruano/contact-app.git",
     imageUrl: "/assets/images/contactApp.png"
   },
   {
     title: "Ventas Lite",
-    techs: ["Laravel", "Mysql"],
-    link: "/",
+    techs: ["Laravel", "Mysql","Livewire"],
+    link: "/projects/",
     repoUrl: "https://github.com/gerson-ruano/ventaslite.git",
     imageUrl: "/assets/images/ventaslite.png"
-    //isComingSoon: true,
+    //isComingSoon: true, //no esta montado en la WEB
   },
   {
     title: "JWT Aut Laravel",
     techs: ["Laravel", "Mysql"],
-    link: "/",
+    link: "/projects",
     repoUrl: "https://github.com/gerson-ruano/jwt-laravel.git",
     imageUrl: "/assets/images/jwt-laravel.png"
   },
   {
-    title: "Cursos",
-    techs: ["Laravel", "Mysql"],
-    link: "/",
-    repoUrl: "https://github.com/gerson-ruano/cursos.git",
-    imageUrl: "/assets/images/cursos.png"
+    title: "Admi GR",
+    techs: ["Laravel", "Mysql", "Filament"],
+    link: "/projects",
+    repoUrl: "https://github.com/gerson-ruano/admigr.git",
+    imageUrl: "/assets/images/admi_gr.png"
   },
   /*
   {

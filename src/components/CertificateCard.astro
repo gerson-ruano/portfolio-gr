@@ -2,7 +2,7 @@
 import type { Certificate } from "@/data/certificates";
 
 type Props = Certificate;
-const { title, techs, emission, link, repoUrl, imageUrl, isComingSoon } = Astro.props;
+const { title, techs, period, link, document, imageUrl, isComingSoon } = Astro.props;
 
 const formatSkills = (values: string[]) =>
   values.toString().replaceAll(",", " | ");
@@ -30,7 +30,7 @@ const formatSkills = (values: string[]) =>
       {formatSkills(techs)}
     </div>
     <div class="mb-1 pt-4 text-sm text-gray-500">
-      {formatSkills(emission)}
+      {formatSkills(period)}
     </div>
   </div>
 
@@ -38,16 +38,16 @@ const formatSkills = (values: string[]) =>
     {
       !isComingSoon && (
         <div class="flex flex-wrap justify-end gap-2">
-          {repoUrl && (
+          {document && (
             <a
               class="icon-link"
-              href={repoUrl}
+              href={document}
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
                 class="size-14 p-1 md:size-10"
-                src="/assets/svg/icons/certificate.svg"
+                src="/assets/svg/icons/open.svg"
                 alt="git repo url"
               />
             </a>
@@ -61,7 +61,7 @@ const formatSkills = (values: string[]) =>
             >
               <img
                 class="size-14 p-1 md:size-10"
-                src="/assets/svg/icons/globe.svg"
+                src="/assets/svg/icons/verificate.svg"
                 alt="live url"
               />
             </a>

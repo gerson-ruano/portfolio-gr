@@ -3,7 +3,7 @@ import type { Certificate } from "@/data/certificates";
 
 type Props = Certificate;
 
-const { title, techs, emission, link, isComingSoon } = Astro.props;
+const { title, techs, period, link, isComingSoon } = Astro.props;
 
 const formatSkills = (values: string[]) =>
   values.toString().replaceAll(",", " | ");
@@ -34,10 +34,10 @@ const formatSkills = (values: string[]) =>
         <div class="flex flex-col gap-4 md:flex-row md:items-center">
           <p class="text-xl">{title}</p>
           <p class="text-neutral-700 dark:text-neutral-400">{formatSkills(techs)}</p>
-          <!--p class="text-neutral-700 dark:text-neutral-400">{formatSkills(emission)}</p-->
+          <!--p class="text-neutral-700 dark:text-neutral-400">{formatSkills(period)}</p-->
         </div>
 
-        <img class="h-4 w-4" src="/assets/svg/icons/globe.svg"/>
+        <img class="h-4 w-4" src="/assets/svg/icons/certificate.svg"/>
       </a>
     )
   }
