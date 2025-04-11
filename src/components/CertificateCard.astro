@@ -13,61 +13,64 @@ const formatSkills = (values: string[]) =>
 >
   {
     imageUrl && (
-      <div class="w-full h-44 p-2 overflow-hidden">
+      <div class="w-full h-52 overflow-hidden">
         <img
           src={imageUrl}
           alt={`${title} project screenshot`}
-          class="w-full h-full border rounded border-neutral-500 transition-colors duration-300"
+          class="w-full h-full object-cover border rounded border-neutral-500 transition-colors duration-300"
         />
       </div>
     )
   }
-  <div class="p-4 flex-grow">
-    <h5 class="mb-2 text-sm font-bold tracking-tight">
-      {title}
-    </h5>
-    <div class="mb-2 pt-4 text-sm font-bold text-gray-300">
-      {formatSkills(techs)}
+  
+  <div class="flex flex-col justify-between flex-grow">
+    <div class="p-2">
+      <h5 class="text-sm font-bold tracking-tight">
+        {title}
+      </h5>
+      <div class="text-xs font-bold text-blue-700 dark:text-gray-300 mt-1">
+        {formatSkills(techs)}
+      </div>
+      <div class="text-xs text-gray-500 mt-0.5">
+        {formatSkills(period)}
+      </div>
     </div>
-    <div class="mb-1 pt-4 text-sm text-gray-500">
-      {formatSkills(period)}
-    </div>
-  </div>
 
-  <div class="p-3 mt-auto">
-    {
-      !isComingSoon && (
-        <div class="flex flex-wrap justify-end gap-2">
-          {document && (
-            <a
-              class="icon-link"
-              href={document}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                class="size-14 p-1 md:size-10"
-                src="/assets/svg/icons/open.svg"
-                alt="git repo url"
-              />
-            </a>
-          )}
-          {link && (
-            <a
-              class="icon-link"
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                class="size-14 p-1 md:size-10"
-                src="/assets/svg/icons/verificate.svg"
-                alt="live url"
-              />
-            </a>
-          )}
-        </div>
-      )
-    }
+    <div class="p-1 mt-auto">
+      {
+        !isComingSoon && (
+          <div class="flex flex-wrap justify-end gap-2">
+            {document && (
+              <a
+                class="icon-link"
+                href={document}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="size-10 p-1"
+                  src="/assets/svg/icons/open.svg"
+                  alt="document url"
+                />
+              </a>
+            )}
+            {link && (
+              <a
+                class="icon-link"
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="size-10 p-1"
+                  src="/assets/svg/icons/verificate.svg"
+                  alt="live url"
+                />
+              </a>
+            )}
+          </div>
+        )
+      }
+    </div>
   </div>
 </div>

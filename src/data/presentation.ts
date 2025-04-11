@@ -54,11 +54,11 @@ const presentation: Presentation = {
   title: "Systems Analyst / Developer",
   description: `
     ¡Hola, soy <strong class="font-bold text-blue-700">Gerson Ruano</strong>
-    En esta web encontrarás algunas de mis <strong class="font-bold text-blue-700">publicaciones</strong> 
+    en esta web encontrarás algunas de mis <strong class="font-bold text-blue-700">publicaciones</strong> 
     que me parecen interesantes, <strong class="font-bold text-blue-700">proyectos</strong> en los que he trabajado, 
-    <strong class="font-bold text-blue-700">cursos /certificaciones </strong> que he tomado y obtenido certificados 
-    <strong class="font-bold text-blue-700">Tecnologias </strong> y diferentes herramientas con las que he trabajado 
-    asi como <strong class="font-bold text-blue-700"> enlaces</strong> a mis demas plataformas.
+    <strong class="font-bold text-blue-700">cursos /certificaciones </strong> que he tomado y obtenido su certificado 
+    tambien <strong class="font-bold text-blue-700">Tecnologias </strong> y diferentes herramientas con las que he trabajado 
+    asi como <strong class="font-bold text-blue-700"> enlaces</strong> a mis demas plataformas de contacto.
   `,
   socialMedia: socialMediaPlatforms,
 };
