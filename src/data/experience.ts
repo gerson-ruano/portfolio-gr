@@ -17,7 +17,7 @@ const experiences = [
       },
       {
         company: "UMG Guatemala",
-        role: "Master en Informatica con énfasis en Comunicaciones",
+        role: "Pensum cerrado de Master en Informatica con énfasis en Comunicaciones",
         period: "2021-2022",
       },
     ],

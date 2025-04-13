@@ -16,6 +16,7 @@ type Presentation = {
   name: string;
   mail: string;
   title: string;
+  linkedIn: string;
   description: string;
   socialMedia: SocialMediaPlatform[];
 };
@@ -52,13 +53,14 @@ const presentation: Presentation = {
   name: "Gerson Ruano",
   mail: "toge619@gmail.com",
   title: "Systems Analyst / Developer",
+  linkedIn: "https://www.linkedin.com/in/gerson-ruano",
   description: `
-    ¡Hola, soy <strong class="font-bold text-blue-700">Gerson Ruano</strong>
-    en esta web encontrarás algunas de mis <strong class="font-bold text-blue-700">publicaciones</strong> 
-    que me parecen interesantes, <strong class="font-bold text-blue-700">proyectos</strong> en los que he trabajado, 
-    <strong class="font-bold text-blue-700">cursos /certificaciones </strong> que he tomado y obtenido su certificado 
-    tambien <strong class="font-bold text-blue-700">Tecnologias </strong> y diferentes herramientas con las que he trabajado 
-    asi como <strong class="font-bold text-blue-700"> enlaces</strong> a mis demas plataformas de contacto.
+    ¡Hola, soy <strong class="font-bold text-blue-500">Gerson Ruano</strong>
+    en esta web encontrarás algunas de mis <strong class="font-bold text-blue-500">publicaciones</strong> 
+    que me parecen interesantes, <strong class="font-bold text-blue-500">proyectos</strong> en los que he trabajado, 
+    <strong class="font-bold text-blue-500">cursos /certificaciones </strong> que he tomado y obtenido su certificado 
+    tambien <strong class="font-bold text-blue-500">Tecnologias </strong> y diferentes herramientas con las que he trabajado 
+    asi como <strong class="font-bold text-blue-500"> enlaces</strong> a mis demas plataformas de contacto.
   `,
   socialMedia: socialMediaPlatforms,
 };

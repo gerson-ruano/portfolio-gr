@@ -12,6 +12,7 @@ Portafolio en ASTRO basado en ASTRO RANG.
 - 🔍 SEO-friendly
 - 📊 Skills showcase
 - 💼 Project display
+- 💼 Courses display
 - 📜 Experience timeline
 
 ## 🛠️ Technologies Used
@@ -55,21 +56,25 @@ Portafolio en ASTRO basado en ASTRO RANG.
 
 Update your personal information in `src/data/presentation.ts`:
 
+### Blog Posts
+
+Add your blog posts as Markdown files in the `src/content/blogs` directory.
+
 ### Projects
 
 Add or modify your projects in `src/data/projects.ts`:
 
 ### Skills
 
-Customize your skills in `src/data/skills.ts`:
+Customize your skill in `src/data/skills.ts`:
+
+### Cursos
+
+Add your courses/certificates as Markdown files in the `src/content/certificates` directory.
 
 ### Experience
 
 Update your experience in `src/data/experience.ts`:
-
-### Blog Posts
-
-Add your blog posts as Markdown files in the `src/content/blogs` directory.
 
 ## 📄 License
 
