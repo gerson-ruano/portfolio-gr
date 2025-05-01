@@ -1,6 +1,7 @@
 # Portfolio GR
 
-Portafolio en ASTRO basado en ASTRO RANG.
+Portafolio personal en astro basado en el proyecto de ASTRO RANG.
+https://github.com/chaturrved/astro-rang.git
 
 ## 🚀 Features
 
@@ -30,7 +31,7 @@ Portafolio en ASTRO basado en ASTRO RANG.
 
 2. Navigate to the project directory:
    ```bash
-   cd astro-rang
+   cd portfolio-gr
    ```
 
 3. Install yarn:
@@ -63,6 +64,10 @@ Add your blog posts as Markdown files in the `src/content/blogs` directory.
 ### Projects
 
 Add or modify your projects in `src/data/projects.ts`:
+
+### Courses
+
+Add or modify your projects in `src/data/certificates.ts`:
 
 ### Skills
 

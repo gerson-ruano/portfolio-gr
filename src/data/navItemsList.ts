@@ -4,7 +4,7 @@ export type NavItemType = {
   additionalClasses?: string;
 };
 
-const cvUrl = "/assets/cv.pdf";
+const cvUrl = "/assets/desarrollador-web.pdf";
 
 const navItemsList: NavItemType[] = [
   {
