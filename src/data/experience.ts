@@ -2,8 +2,8 @@ const experiences = [
   {
     title: "Experience",
     items: [
-      { company: "MinGob", role: "Tecnico de Soporte Tecnico", period: "2014-2018" },
-      { company: "MinGob", role: "Tecnico de Redes y Telecomunicaciones", period: "2018-2021" },
+      { company: "MinGob", role: "Tecnico de Soporte", period: "2014-2018" },
+      { company: "MinGob", role: "Tecnico de Redes", period: "2018-2021" },
       { company: "MinGob", role: "Programador de Sistemas", period: "2021-Present" },
     ],
   },
@@ -17,7 +17,7 @@ const experiences = [
       },
       {
         company: "UMG Guatemala",
-        role: "Pensum cerrado de Master en Informatica con énfasis en Comunicaciones",
+        role: "Pensum cerrado en M.A. en Informatica con énfasis en Comunicaciones",
         period: "2021-2022",
       },
     ],

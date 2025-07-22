@@ -1,10 +1,10 @@
 ---
-title: "Ventas Lite"
+title: "Mejores Practicas de Optimizaciòn: Consultas en Laravel"
 publishedAt: 2025-03-15
-description: "Sistema de Ventas"
-slug: "sistema"
+description: "Mejores Prácticas Avanzadas de Optimización de Consultas en Laravel"
+slug: "Mejores-Prácticas-Avanzadas-de-Optimización-de-Consultas-en-Laravel"
 isPublished: true
-imagePath: "../../assets/ventasgr.png"
+imagePath: "../../assets/eager_loading.jpg"
 ---
 
 ## Conceptos Clave para la Optimización de Consultas

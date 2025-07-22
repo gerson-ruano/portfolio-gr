@@ -12,7 +12,7 @@ const navItemsList: NavItemType[] = [
     link: "/",
   },
   {
-    title: "Blog",
+    title: "Project details",
     link: "/blog",
   },
   {

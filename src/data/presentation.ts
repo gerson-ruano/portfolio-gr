@@ -55,12 +55,12 @@ const presentation: Presentation = {
   title: "Systems Analyst / Developer",
   linkedIn: "https://www.linkedin.com/in/gerson-ruano",
   description: `
-    ¡Hola, soy <strong class="font-bold text-blue-500">Gerson Ruano</strong>
-    en esta web encontrarás algunas de mis <strong class="font-bold text-blue-500">publicaciones</strong> 
-    que me parecen interesantes, <strong class="font-bold text-blue-500">proyectos</strong> en los que he trabajado, 
-    <strong class="font-bold text-blue-500">cursos /certificaciones </strong> que he tomado y obtenido su certificado 
-    tambien <strong class="font-bold text-blue-500">Tecnologias </strong> y diferentes herramientas con las que he trabajado 
-    asi como <strong class="font-bold text-blue-500"> enlaces</strong> a mis demas plataformas de contacto.
+    Hello, I'm <strong class="font-bold text-blue-500">Gerson Ruano</strong>
+On this website you'll find some of my <strong class="font-bold text-blue-500">publications</strong>
+that I find interesting, <strong class="font-bold text-blue-500">projects</strong> I've worked on,
+<strong class="font-bold text-blue-500">courses/certifications</strong> I've taken and certified,
+also <strong class="font-bold text-blue-500">Technologies</strong> and different tools I've worked with,
+as well as <strong class="font-bold text-blue-500">links</strong> to my other contact platforms.
   `,
   socialMedia: socialMediaPlatforms,
 };

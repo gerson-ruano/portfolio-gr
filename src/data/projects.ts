@@ -24,18 +24,25 @@ const projects: Project[] = [
     //isComingSoon: true, //no esta montado en la WEB
   },
   {
-    title: "JWT Aut Laravel",
-    techs: ["Laravel", "Mysql"],
-    link: "/projects",
-    repoUrl: "https://github.com/gerson-ruano/jwt-laravel.git",
-    imageUrl: "/assets/images/jwt-laravel.png"
-  },
-  {
     title: "Admi GR",
     techs: ["Laravel", "Mysql", "Filament"],
     link: "/projects",
     repoUrl: "https://github.com/gerson-ruano/admigr.git",
     imageUrl: "/assets/images/admi_gr.png"
+  },
+  {
+    title: "Monitor de Ips",
+    techs: ["Python", "Flask"],
+    link: "/projects",
+    repoUrl: "https://github.com/gerson-ruano/monitor_ips.git",
+    imageUrl: "/assets/images/monitor_ips.png"
+  },
+  {
+    title: "JWT Aut Laravel",
+    techs: ["Laravel", "Mysql"],
+    link: "/projects",
+    repoUrl: "https://github.com/gerson-ruano/jwt-laravel.git",
+    imageUrl: "/assets/images/jwt-laravel.png"
   },
   /*
   {
