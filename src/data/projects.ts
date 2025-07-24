@@ -28,7 +28,7 @@ const projects: Project[] = [
     techs: ["Laravel", "Mysql", "Filament"],
     link: "/projects",
     repoUrl: "https://github.com/gerson-ruano/admigr.git",
-    imageUrl: "/assets/images/admi_gr.png"
+    imageUrl: "/assets/images/admigr.png"
   },
   {
     title: "Monitor de Ips",

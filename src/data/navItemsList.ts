@@ -12,12 +12,12 @@ const navItemsList: NavItemType[] = [
     link: "/",
   },
   {
-    title: "Project details",
-    link: "/blog",
-  },
-  {
     title: "Projects",
     link: "/projects"
+  },
+  {
+    title: "Project details",
+    link: "/blog",
   },
   {
     title: "Courses",
@@ -26,7 +26,7 @@ const navItemsList: NavItemType[] = [
   {
     title: "CV",
     link: cvUrl,
-    additionalClasses: "border-2 rounded-xl border-blue-500",
+    additionalClasses: "border-2 rounded-lg border-blue-500 text-sm",
   },
 ];
 

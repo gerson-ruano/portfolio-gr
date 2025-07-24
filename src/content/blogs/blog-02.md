@@ -1,58 +1,63 @@
 ---
 
-title: "PHP Filament: La Solución Ideal para Crear Back Offices Eficientes en Laravel"
-publishedAt: 2025-01-03
-description: "Filament PHP es una herramienta poderosa que permite a las empresas optimizar sus back offices con rapidez y eficacia."
-slug: "php-filament-la-solución-ideal-para-crear-back-offices-eficientes"
+title: "Contact App"
+publishedAt: 2024-12-03
+description: "CRUD de contactos en Python con la librería de Flask"
+slug: "sistema_python"
 isPublished: true
-imagePath: "../../assets/filament.png"
+imagePath: "../../assets/contactApp.png"
 ---
 
-## ¿Qué es Filament PHP?
+## Descripción de ultimos cambios
+#se agrego Paginate para el paginado de los registros
+#se agrego busqueda de contacto.
 
-Es una colección de componentes full-stack diseñados para facilitar la creación de paneles de administración en Laravel. 
-Su flexibilidad y facilidad de uso lo convierten en una herramienta perfecta para construir back offices con rapidez.
+## Tecnologias empleadas.
+> El lenguaje que he utilizado es Python. 
 
-### Automatización de Procesos Repetitivos
+> Utilizando base de datos mysql.
 
-```php
-	/**
-	 * Función para ver la tabla con la información
-	 * @param  Table  $table [description]
-	 * @return [type]        [description]
-	 */
-	public static function table(Table $table): Table {
-		return $table
-		// Columnas
-			->columns([
-				TextColumn::make('titulo'),
-				TextColumn::make('contenido'),
-			])
-			//Filtros
-			->filters([
-				//
-			])
-			->actions([
-				Tables\Actions\EditAction::make(),
-			])
-			->bulkActions([
-				Tables\Actions\BulkActionGroup::make([
-					Tables\Actions\DeleteBulkAction::make(),
-				]),
-			])
-			->emptyStateActions([
-				Tables\Actions\CreateAction::make(),
-			]);
-	}
+> Se agrego FontAwesome 5 para los iconos.
 
+> Breeze para la autenticación de los usuarios. 
+
+> Fontawesome para iconos del sistema. 
+
+> Bootstrap 5
+
+## Funciones existentes
+
+El sistema esta en constante actualización para incorporarle mejoras.
+
+> Paginado
+
+> Alertas modal
+
+> busqueda de contactos
+
+> Agregar contactos
+
+> Editar contactos
+
+> Eliminar contactos
+
+### Ejemplo: Add Contact
+
+```py
+#Funcion de agregar contacto
+
+@app.route('/add_contact', methods = ['GET','POST'])
+def add_contact():
+  if request.method == 'POST':
+    fullname = request.form['fullname']
+    lastname = request.form['lastname']
+    phone = request.form['phone']
+    email = request.form['email']
+    cur = mysql.connection.cursor()
+    cur.execute('INSERT INTO contact (fullname, lastname, phone, email) VALUES (%s, %s, %s, %s)',
+    (fullname, lastname, phone, email)) 
+    mysql.connection.commit()
+    flash('Contacto agregado satisfactorimente')
+    return redirect(url_for('inicio'))
+  return render_template('add_contact.html') 
 ```
-
-> Generación automática de CRUD: Simplifica la creación de interfaces de administración con operaciones CRUD.
-> Integración perfecta con Laravel: Al ser nativo de Laravel, permite aprovechar las potentes características de este framework.
-> Totalmente personalizable: Ajusta las interfaces según las necesidades de tu aplicación, ideal para la gestión de back office support.
-
-## Personalización
-La adaptabilidad es uno de los puntos fuertes de Filament. Puedes personalizar cada componente del back office según las necesidades específicas de tu negocio, lo que permite la integración de módulos como un back office support para gestionar incidencias, o funciones especializadas para la administración de ventas.
-
-## Fuente  12/11/2024
-https://www.linkedin.com/pulse/php-filament-la-soluci%C3%B3n-ideal-para-crear-back-offices-eficientes-ajyff/ 

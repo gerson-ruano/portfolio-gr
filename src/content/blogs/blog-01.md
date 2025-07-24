@@ -1,58 +1,103 @@
 ---
-title: "Ventas Lite"
-publishedAt: 2025-03-15
-description: "Sistema de Ventas"
+title: "Sistema Ventas GR"
+publishedAt: 2025-05-15
+description: "Aplicación que permite gestionar productos y ventas de los mismos, administrar roles y permisos de usuarios para ingreso al sistema."
 slug: "sistema"
 isPublished: true
 imagePath: "../../assets/ventasgr.png"
 ---
 
-## Conceptos Clave para la Optimización de Consultas
-Las consultas de bases de datos eficientes son cruciales para crear aplicaciones Laravel escalables y de alto rendimiento. Laravel proporciona dos poderosas herramientas—Eloquent ORM y Query Builder—para interactuar con bases de datos. Sin embargo, escribir consultas mal optimizadas puede provocar cuellos de botella en el rendimiento, especialmente a medida que su aplicación se escala.
+## Descripción
+Gestionar compras de productos existentes, visualización de diferentes reportes en tiempo real con dashboard de graficas.
 
-El problema de N+1 ocurre cuando la consulta de una colección de registros conduce a múltiples
-consultas innecesarias de la base de datos debido a la carga perezosa.
+## Tecnologias empleadas.
+> El Framework que he utilizado es Laravel version 9-11 ya que me ha permitido crear fácilmente la estructura básica del proyecto haciendo uso de sus librerías, paquetes y herramientas. 
 
-### Utilice Eager Cargando La carga ansiosa obtiene registros relacionados en una sola consulta.
+> Tailwind para el diseño de los estilos del proyecto Daisy Ui para utilizar componentes prediseñados de tailwind.
+
+> Livewire para crear componentes personalizados: para la reactividad de la pagina.
+
+> Breeze para la autenticación de los usuarios. 
+
+> Fontawesome para iconos del sistema. 
+
+> SweetAlert2 para notificaciones.
+
+## Modulos existentes
+
+El sistema esta en constante actualización para incorporarle mas modulos y mejoras.
+
+> VENTAS,
+> ADMINITRACION DE STOCK,
+> REPORTERIA,
+> GESTION DE USUARIOS,
+> CONFIGURACIÓN,
+> API - FACTUS
+
+## MODULO REPORTE DE VENTAS
+Muestra una vista general de las ventas realizadas donde se puede realizar consultas y filtrar nuestra busqueda, ademas podemos exportar los reportes en PDF y EXCEL.
+
+<img
+      class="w-140 h-140 mb-3 shadow-lg border-2 border-neutral-500"
+      src="/assets/images/reporte_ventas.png"
+    />
+
+## MODULO GRAFICAS
+Dashbord de stock y ventas realizadas para la toma de decisiones y tener una vision general del sistema y sus activos.
+
+<img
+      class="w-140 h-140 mb-3 shadow-lg border-2 border-neutral-500"
+      src="/assets/images/graficas.png"
+    />
+
+### Ejemplo: Scan Product
 
 ```php
-// Bad: Causes N+1 problem
-$users = User::all();
-foreach ($users as $user) {
-    echo $user->profile->bio; // Queries the 'profiles' table multiple times
-}
+public function scanCode($barcode, $cant = 1)
+    {
+        // Si $barcode viene como array (porque dispatch manda un objeto JS)
+        if (is_array($barcode) && isset($barcode['barcode'])) {
+            $barcode = trim($barcode['barcode']);
+        } else {
+            $barcode = trim($barcode);
+        }
 
-// Good: Eager load 'profile' relationship
-$users = User::with('profile')->get();
-foreach ($users as $user) {
-    echo $user->profile->bio; // Queries the 'profiles' table once
-}
+        $product = Product::where('barcode', $barcode)->first();
+
+        if (!$product) {
+            $this->dispatch('showNotification', 'El producto con código ' . $barcode . ' no existe o aún no está registrado', 'dark');
+            $this->search = '';
+            return;
+        }
+
+        $cartItem = $this->getCartItem($product->id);
+
+        if ($cartItem) {
+            $this->increaseQty($product->id, $cant);
+            return;
+        }
+
+        if ($product->stock < $cant) {
+            $this->dispatch('showNotification', 'Stock insuficiente para realizar la operación', 'warning');
+            return;
+        }
+
+        Cart::add($product->id, $product->name, $cant, $product->price, ['image' => $product->image]);
+        $this->updateCartSummary();
+        $this->updateTotalPrice();
+        $this->dispatch('showNotification', 'Producto ' . $product->name . ' agregado exitosamente', 'success');
+        $this->dispatch('cartUpdated');
+
+    }
 ```
-### Ejemplo
+### Ejemplo: Update Acash
 ```php
-// Use specific fields instead of loading everything
-$users = User::with(['profile:id,user_id,bio'])->get();
-```
-## Evite la Sobrecarga con Eager Loading
-Si bien la carga ansiosa es útil, cargar relaciones innecesarias puede desperdiciar recursos.
-
-## Query Builder vs. Eloquent
-
-El Eloquent ORM de Laravelvia ofrece una abstracción de alto nivel, mientras que Query Builder proporciona más control y eficiencia.
-
-Cuándo Usar Query Builder?
-
-> Consultas complejas que involucran múltiples uniones.
-
-> Cuando el rendimiento es crítico y desea un control de grano fino.
-
-### Ejemplo de Query Builder:
-```php
-
-// Consulta Constructor para la unión compleja
-$usuarios = DB::table('users')
-    ->join('perfiles', 'users.id', '=', 'perfiles.user_id')
-    ->where('users.active', true)
-    ->select('users.name', 'perfiles.bio')
-    ->get();
+public function ACash($value)
+    {
+        if ($value == 0) {
+            $value = $this->totalPrice - $this->efectivo;
+        }
+        $this->efectivo += (float)$value;
+        $this->change = ($this->efectivo - $this->totalPrice);
+    }
 ```

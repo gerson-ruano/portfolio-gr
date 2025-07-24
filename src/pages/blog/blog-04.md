@@ -3,7 +3,7 @@ title: "Mejores Practicas de Optimizaciòn: Consultas en Laravel"
 publishedAt: 2025-03-15
 description: "Mejores Prácticas Avanzadas de Optimización de Consultas en Laravel"
 slug: "Mejores-Prácticas-Avanzadas-de-Optimización-de-Consultas-en-Laravel"
-isPublished: true
+isPublished: false
 imagePath: "../../assets/eager_loading.jpg"
 ---
 
