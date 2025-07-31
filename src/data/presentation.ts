@@ -4,6 +4,7 @@ export enum SocialType {
   twitter = 'Twitter',
   email = 'Email',
   instagram = 'Instagram',
+  tableau = 'Tableau',
 }
 
 type SocialMediaPlatform = {
@@ -22,11 +23,11 @@ type Presentation = {
 };
 
 const socialMediaPlatforms: SocialMediaPlatform[] = [
-  /*{
-    type: SocialType.twitter,
-    url: 'https://twitter.com/xxx',
-    icon: '/assets/svg/icons/x.svg',
-  },*/
+  {
+    type: SocialType.tableau,
+    url: 'https://public.tableau.com/app/profile/gerson6011',
+    icon: '/assets/svg/icons/tableau.svg',
+  },
   {
     type: SocialType.gitHub,
     url: 'https://github.com/gerson-ruano',
