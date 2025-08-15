@@ -4,6 +4,11 @@ import navItemsList from "@/data/navItemsList";
 import NavItem from "@/components/shared/NavItem.astro";
 import type { NavItemType } from "@/data/navItemsList";
 import ThemeIcon from "@/components/ThemeIcon.astro";
+import config from 'astro-i18next.config.js';
+const { locales, defaultLocale } = config;  
+// console.log('Locales:', config.locales);
+import { LanguageSelector } from 'astro-i18next/components';
+
 ---
 
 <header>
@@ -24,7 +29,18 @@ import ThemeIcon from "@/components/ThemeIcon.astro";
         }
       </ul>
     </nav>
+    <div class="flex items-center space-x-4">
     <ThemeIcon />
+
+    <ul>
+    {locales.map(locale => (
+      <li>
+        <a href={`/${locale}`}>{locale.toUpperCase()}</a>
+      </li>
+    ))}
+  </ul>
+
+
 
     <button class="md:hidden" aria-label="menu-icon">
       <svg
