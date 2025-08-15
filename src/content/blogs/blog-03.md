@@ -14,18 +14,18 @@ Aplicación que permite gestionar productos, administracion de roles y permisos 
 ## Tecnologias empleadas.
 > El Framework que he utilizado es Laravel version 12 ya que me ha permitido crear fácilmente la estructura básica del proyecto haciendo uso de sus librerías, paquetes y herramientas. 
 
-> Filament para aumentar el desarrollo.
+> Filament para disminuir el tiempo de desarrollo.
 
-> Filament Shield
+> Filament Shield para roles y permisos.
 
-> Mysql
+> Mysql como Base de Datos.
 
-> Heroicons
+> Heroicons para los iconos.
 
 
 ## Modulos existentes
 
-El sistema esta en constante actualización para incorporarle mas modulos y mejoras.
+El sistema esta en constante actualización para incorporarle mas modulos y mejoras en sus funcionalidades.
 
 > DESPACHOS,
 > ADMINITRACION DE STOCK,
@@ -42,7 +42,7 @@ Es donde se gestionan las ordenes de los productos existentes, tambien existe un
     />
 
 ## MODULO ROLES 
-Permite adminitrar los roles y permisos a los que tiene acceso los usuarios del sistema.
+Permite administrar los roles y permisos a los que tienen acceso los usuarios del sistema.
 
 <img
       class="w-140 h-140 mb-3 shadow-lg border-2 border-neutral-500"

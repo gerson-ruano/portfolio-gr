@@ -2,7 +2,7 @@
 
 title: "Contact App"
 publishedAt: 2024-12-03
-description: "CRUD de contactos en Python con la librería de Flask"
+description: "Gestion de contactos en Python con la librería de Flask"
 slug: "sistema_python"
 isPublished: true
 imagePath: "../../assets/contactApp.png"
@@ -11,15 +11,12 @@ imagePath: "../../assets/contactApp.png"
 ## Descripción de ultimos cambios
 #se agrego Paginate para el paginado de los registros
 #se agrego busqueda de contacto.
+#se agrego Font awesome para iconos
 
 ## Tecnologias empleadas.
 > El lenguaje que he utilizado es Python. 
 
-> Utilizando base de datos mysql.
-
-> Se agrego FontAwesome 5 para los iconos.
-
-> Breeze para la autenticación de los usuarios. 
+> Base de datos mysql.
 
 > Fontawesome para iconos del sistema. 
 
@@ -27,13 +24,15 @@ imagePath: "../../assets/contactApp.png"
 
 ## Funciones existentes
 
-El sistema esta en constante actualización para incorporarle mejoras.
+El sistema esta en constante actualización para incorporarle mejoras de diseño y funcionalidad.
 
 > Paginado
 
 > Alertas modal
 
 > busqueda de contactos
+
+> visualización de contactos
 
 > Agregar contactos
 

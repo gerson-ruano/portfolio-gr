@@ -1,41 +1,41 @@
 ---
 title: "Sistema Ventas GR"
 publishedAt: 2025-05-15
-description: "Aplicación que permite gestionar productos y ventas de los mismos, administrar roles y permisos de usuarios para ingreso al sistema."
+description: "Aplicación que permite gestión de productos y ventas de los mismos, administrar roles y permisos de usuarios para ingreso al sistema."
 slug: "sistema"
 isPublished: true
 imagePath: "../../assets/ventasgr.png"
 ---
 
 ## Descripción
-Gestionar compras de productos existentes, visualización de diferentes reportes en tiempo real con dashboard de graficas.
+Gestión de ventas de productos existentes, visualización de diferentes tipos de reportes en tiempo real con dashboard de graficas.
 
 ## Tecnologias empleadas.
 > El Framework que he utilizado es Laravel version 9-11 ya que me ha permitido crear fácilmente la estructura básica del proyecto haciendo uso de sus librerías, paquetes y herramientas. 
 
-> Tailwind para el diseño de los estilos del proyecto Daisy Ui para utilizar componentes prediseñados de tailwind.
+> Tailwind para el diseño de los estilos del proyecto, Daisy Ui para utilizar componentes prediseñados de tailwind.
 
-> Livewire para crear componentes personalizados: para la reactividad de la pagina.
+> Livewire para crear controlaores y componentes personalizados: para la reactividad de la pagina.
 
 > Breeze para la autenticación de los usuarios. 
 
 > Fontawesome para iconos del sistema. 
 
-> SweetAlert2 para notificaciones.
+> SweetAlert2 para notificaciones interactivas.
 
 ## Modulos existentes
 
-El sistema esta en constante actualización para incorporarle mas modulos y mejoras.
+El sistema esta en constante actualización para incorporarle mas modulos y mejoras en sus funcionalidades.
 
 > VENTAS,
-> ADMINITRACION DE STOCK,
+> ADMINISTRACION DE STOCK,
 > REPORTERIA,
 > GESTION DE USUARIOS,
 > CONFIGURACIÓN,
 > API - FACTUS
 
 ## MODULO REPORTE DE VENTAS
-Muestra una vista general de las ventas realizadas donde se puede realizar consultas y filtrar nuestra busqueda, ademas podemos exportar los reportes en PDF y EXCEL.
+Muestra una vista general de las ventas realizadas en el sistema, donde se puede realizar consultas y filtrar nuestra busqueda para hacerlas mas especificas, ademas podemos exportar los reportes en PDF y EXCEL.
 
 <img
       class="w-140 h-140 mb-3 shadow-lg border-2 border-neutral-500"
@@ -43,7 +43,7 @@ Muestra una vista general de las ventas realizadas donde se puede realizar consu
     />
 
 ## MODULO GRAFICAS
-Dashbord de stock y ventas realizadas para la toma de decisiones y tener una vision general del sistema y sus activos.
+Dashbord de stock, usuarios y ventas realizadas para la toma de decisiones y tener una vision general del sistema y sus activos.
 
 <img
       class="w-140 h-140 mb-3 shadow-lg border-2 border-neutral-500"
