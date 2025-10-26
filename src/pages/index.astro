@@ -42,7 +42,7 @@ const blogCollection = await getCollection("blogs");
               <p>Soon, stay connected 👀...</p>
             ) : (
               <section class="flex flex-col gap-4 md:flex-row md:flex-wrap">
-                {blogCollection.slice(0, 3).map((post) => (
+                {blogCollection.slice(0, 2).map((post) => (
                   <PostCard
                     publishedAt={post.data.publishedAt}
                     title={post.data.title}

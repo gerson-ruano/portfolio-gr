@@ -12,7 +12,7 @@ const navItemsList: NavItemType[] = [
     link: "/",
   },
   {
-    title: "Projects",
+    title: "All Projects",
     link: "/projects"
   },
   {
@@ -20,7 +20,7 @@ const navItemsList: NavItemType[] = [
     link: "/blog",
   },
   {
-    title: "Courses",
+    title: "Courses/Certificates",
     link: "/certificates"
   },
   {

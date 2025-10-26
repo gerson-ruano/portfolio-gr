@@ -2,7 +2,7 @@
 
 title: "Contact App"
 publishedAt: 2024-12-03
-description: "Gestion de contactos en Python con la librería de Flask"
+description: "Gestion de contactos en Python con la librería de Flask y mysql, multiples funciones, busqueda, paginado, notificaciones tipo modals"
 slug: "sistema_python"
 isPublished: true
 imagePath: "../../assets/contactApp.png"

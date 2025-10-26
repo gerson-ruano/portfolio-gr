@@ -5,14 +5,13 @@ https://github.com/chaturrved/astro-rang.git
 
 ## 🚀 Features
 
-- ⚡️ Fast performance
 - 📱 Fully responsive
 - 🎨 Customizable design
-- 🌙 Dark/Light mode support
+- 🌙 Dark/Light
 - 📝 Blog functionality
-- 🔍 SEO-friendly
 - 📊 Skills showcase
 - 💼 Project display
+- 📝 Project details
 - 💼 Courses display
 - 📜 Experience timeline
 

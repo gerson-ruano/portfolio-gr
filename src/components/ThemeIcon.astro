@@ -3,56 +3,27 @@ import config from 'astro-i18next.config.js';
 const { locales, defaultLocale } = config;
 ---
 
-<button id="themeToggle" class="p-2 icon-link" title="Toggle light & dark">
-  <img src="/assets/svg/icons/sun.svg" id="btn-sun" class="w-8 h-8 hidden" />
-  <img src="/assets/svg/icons/moon.svg" id="btn-moon" class="w-8 h-8 hidden" />
+<button id="themeToggle" class="p-2 icon-link theme-toggle" title="Toggle light & dark" aria-label="Toggle theme">
+  <img src="/assets/svg/icons/sun.svg" class="w-8 h-8 theme-icon sun-icon" alt="Light mode" />
+  <img src="/assets/svg/icons/moon.svg" class="w-8 h-8 theme-icon moon-icon" alt="Dark mode" />
 </button>
 
-<!--ul>
-  {locales.map(locale => (
-    <li>
-      <a href={`/${locale}`}>{locale.toUpperCase()}</a>
-    </li>
-  ))}
-</ul-->
-
-<script is:inline>
-  const getStoredTheme = () => {
-    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
-      return localStorage.getItem("theme");
-    }
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
-  };
-
-  const applyTheme = (theme) => {
-    document.documentElement.classList.toggle("dark", theme === "dark");
-    document.documentElement.classList.toggle("light", theme === "light");
-
-    // Mostrar icono correspondiente
-    document.getElementById("btn-sun").classList.toggle("hidden", theme !== "light");
-    document.getElementById("btn-moon").classList.toggle("hidden", theme !== "dark");
-  };
-
-  let theme = getStoredTheme();
-  applyTheme(theme);
-
-  const setupToggle = () => {
-    const themeToggle = document.getElementById("themeToggle");
-    if (themeToggle) {
-      themeToggle.onclick = () => {
-        theme = theme === "dark" ? "light" : "dark";
-        localStorage.setItem("theme", theme);
-        applyTheme(theme);
-      };
-    }
-  };
-
-  // Inicializar en cada carga parcial de Astro
-  document.addEventListener("astro:before-swap", () => {
-    applyTheme(localStorage.getItem("theme") || theme);
-  });
-
-  document.addEventListener("astro:page-load", setupToggle);
-</script>
+<style is:inline>
+  /* Mostrar/ocultar iconos basado en data-theme */
+  .theme-icon {
+    display: none;
+  }
+  
+  html[data-theme="light"] .sun-icon,
+  html[data-theme="dark"] .moon-icon {
+    display: block;
+  }
+  
+  /* Fallback para cuando no hay data-theme */
+  html:not([data-theme]) .sun-icon {
+    display: block;
+  }
+  html:not([data-theme]) .moon-icon {
+    display: none;
+  }
+</style>
