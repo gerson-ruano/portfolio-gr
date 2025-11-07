@@ -31,6 +31,14 @@ const projects: Project[] = [
     imageUrl: "/assets/images/admigr.png"
   },
   {
+    title: "Form WEB",
+    techs: ["Python", "Flask"],
+    link: "https://form-web-zbu3.onrender.com/login",
+    repoUrl: "https://github.com/gerson-ruano/form_web.git",
+    imageUrl: "/assets/images/adm_form.png"
+    //isComingSoon: true,
+  },
+  {
     title: "Monitor de Ips",
     techs: ["Python", "Flask"],
     link: "/projects",
