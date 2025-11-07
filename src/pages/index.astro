@@ -84,7 +84,7 @@ const blogCollection = await getCollection("blogs");
               <p>Soon, stay connected 👀...</p>
             ) : (
               <section class="flex flex-col gap-4">
-                {projects.slice(0, 3).map((project) => (
+                {projects.slice(2, 6).map((project) => (
                   <ProjectBanner {...project} />
                 ))}
               </section>

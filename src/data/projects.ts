@@ -39,6 +39,14 @@ const projects: Project[] = [
     //isComingSoon: true,
   },
   {
+    title: "Mejorador de CVs",
+    techs: ["Python", "Streamlit"],
+    link: "https://mejoradordecvs.streamlit.app",
+    repoUrl: "https://github.com/gerson-ruano/analizador_ATS.git",
+    imageUrl: "/assets/images/mejorador_cvs.png"
+    //isComingSoon: true,
+  },
+  {
     title: "Monitor de Ips",
     techs: ["Python", "Flask"],
     link: "/projects",

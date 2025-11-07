@@ -9,16 +9,16 @@ imagePath: "../../assets/form_activos.png"
 ---
 
 ## Descripción
-Aplicación que permite gestionar y crear formularios via WEB para la obtencion de registros de datos.
+Aplicación que permite gestionar y crear formularios via WEB para la obtencion de datos por medio de estos formularios adaptables.
 
 ## Tecnologias empleadas.
-> El Framework utilice es Flask. 
+> El Framework que utilice es Flask. 
 
 > Python 3.11.9.
 
-> Bootstrap.
+> Taildwind.
 
-> Render para subir el sistema.
+> Render - para subir el sistema a la Web.
 
 > CSV, JSON.
 
@@ -33,12 +33,12 @@ El sistema esta en constante actualización para incorporarle mejoras en sus fun
 
 > DESCARGA DE DATA,
 
-> ADMINISTRACION DE ROLES,
+> ADMINISTRACION DE PERMISOS,
 
-> REGISTRO
+> REGISTRO DE FORMULARIOS EN LINEA
 
 ## MODULO ADMINISTRACION
-Es donde se adminsitran los formularios para que esten disponibles.
+Es donde se administran o crean los formularios para que esten disponibles tambien poderlos editar .
 
 <img
       class="w-140 h-140 mb-3 shadow-lg border-2 border-neutral-500"
@@ -46,7 +46,7 @@ Es donde se adminsitran los formularios para que esten disponibles.
     />
 
 ## MODULO DESCARGAS
-Permite administrar los datos registraos por los usuarios del sistema.
+Permite administrar los datos registrados por los usuarios del sistema en formato de CSV.
 
 <img
       class="w-140 h-140 mb-3 shadow-lg border-2 border-neutral-500"
@@ -54,7 +54,7 @@ Permite administrar los datos registraos por los usuarios del sistema.
     />
 
 ## MODULO GENERADOR QR
-Permite generar los accesos a los formularios por medio de codigos qr o enlaces WEB.
+Permite generar los accesos a los formularios por medio de codigos QR o enlaces WEB para que accedan a registrar sus datos en los formularios.
 
 <img
       class="w-140 h-140 mb-3 shadow-lg border-2 border-neutral-500"

@@ -6,11 +6,14 @@ type Props = NavItemType;
 
 const { title, link, additionalClasses }: NavItemType = Astro.props;
 const [mainPathname, ...subpaths] = splitPathname(Astro.url.pathname);
+
+const isCvLink = link.includes('desarrollador-web.pdf');
 ---
 
 <>
   <a
     href={link}
+    target={isCvLink ? "_blank" : undefined}
     class:list={[
       "p-1",
       additionalClasses
