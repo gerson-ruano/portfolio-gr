@@ -43,6 +43,14 @@ const certificates: Certificate[] = [
     document: "/assets/images/ciberseguridad.png",
     imageUrl: "/assets/images/ciberseguridad.png"
   },
+  {
+    title: "Ciberdelincuencia",
+    techs: ["UNODC"],
+    period: ["Emisión - Dic 2024 "," Expira - No "],
+    link: "https://www.unodc.org/index.html",
+    document: "/assets/images/ciberdelincuencia.png",
+    imageUrl: "/assets/images/ciberdelincuencia.png"
+  },
 ];
 
 export default certificates;
